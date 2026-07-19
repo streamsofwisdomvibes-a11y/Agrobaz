@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketplace | Agrobaz</title>
+    <meta name="description" content="Browse crop and agro-product listings on Agrobaz Marketplace." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="subpage-header">
+      <nav class="topbar">
+        <a class="brand" href="../index.html">
+          <img src="../images/agrobaz-logo.svg" alt="Agrobaz Market" class="logo">
+        </a>
+        <div class="nav-links">
+          <a href="marketplace.html">Marketplace</a>
+          <a href="seller-dashboard.html">Dashboard</a>
+          <a href="signin.html">Sign in</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-intro">
+        <p class="eyebrow">Marketplace</p>
+        <h1>Find crops, seeds, fertilizer, and farming tools.</h1>
+        <p>Search, compare, and connect with trusted buyers and sellers across the agro supply chain.</p>
+      </section>
+
+      <section class="search-panel">
+        <input type="text" placeholder="Search products or categories" />
+        <button type="button">Search</button>
+      </section>
+
+      <section class="product-grid">
+        <article class="product-card">
+          <h3>Premium Maize Grain</h3>
+          <p>High-yield maize from verified suppliers.</p>
+          <span>From $180 / ton</span>
+        </article>
+        <article class="product-card">
+          <h3>Hybrid Rice Seeds</h3>
+          <p>Fast-growing, drought-tolerant seeds.</p>
+          <span>From $22 / bag</span>
+        </article>
+        <article class="product-card">
+          <h3>Organic Fertilizer</h3>
+          <p>Eco-friendly fertilizer for soil health.</p>
+          <span>From $14 / sack</span>
+        </article>
+        <article class="product-card">
+          <h3>Irrigation Pump Kit</h3>
+          <p>Reliable pump systems for small and large farms.</p>
+          <span>From $310 / unit</span>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Agrobaz Market</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

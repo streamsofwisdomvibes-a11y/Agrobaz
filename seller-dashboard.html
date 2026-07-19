@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seller Dashboard | Agrobaz</title>
+    <meta name="description" content="Manage listings, orders, and commissions from the Agrobaz seller dashboard." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="subpage-header">
+      <nav class="topbar">
+        <a class="brand" href="../index.html">
+          <img src="../images/agrobaz-logo.svg" alt="Agrobaz Market" class="logo">
+        </a>
+        <div class="nav-links">
+          <a href="marketplace.html">Marketplace</a>
+          <a href="seller-dashboard.html">Dashboard</a>
+          <a href="signin.html">Sign in</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-intro">
+        <p class="eyebrow">Seller dashboard</p>
+        <h1>Track orders, sales, and commissions.</h1>
+        <p>Run your agro business with simple performance insights and straightforward inventory tools.</p>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="dashboard-card">
+          <h3>Active listings</h3>
+          <strong>24</strong>
+          <p>Products currently live on the marketplace.</p>
+        </article>
+        <article class="dashboard-card">
+          <h3>Pending orders</h3>
+          <strong>8</strong>
+          <p>Buyers waiting for confirmation.</p>
+        </article>
+        <article class="dashboard-card">
+          <h3>Commission earned</h3>
+          <strong>$1,240</strong>
+          <p>Revenue generated from completed sales.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Agrobaz Market</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

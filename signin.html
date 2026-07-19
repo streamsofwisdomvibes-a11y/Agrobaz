@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | Agrobaz</title>
+    <meta name="description" content="Sign in to your Agrobaz account to manage listings and orders." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="subpage-header">
+      <nav class="topbar">
+        <a class="brand" href="../index.html">
+          <img src="../images/agrobaz-logo.svg" alt="Agrobaz Market" class="logo">
+        </a>
+        <div class="nav-links">
+          <a href="marketplace.html">Marketplace</a>
+          <a href="seller-dashboard.html">Dashboard</a>
+          <a href="signin.html">Sign in</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell auth-shell\">
+      <section class="auth-card\">
+        <p class=\"eyebrow\">Join the network</p>
+        <h1>Sign in to Agrobaz</h1>
+        
+        <div id=\"role-selector\" class=\"role-selector\">
+          <p style=\"margin-bottom: 1rem; color: var(--muted);\">Choose your role:</p>
+          <div class=\"role-buttons\">
+            <button type=\"button\" class=\"role-btn\" data-role=\"buyer\">
+              <span class=\"role-icon\">👤</span>
+              <strong>Buyer</strong>
+              <small>Browse & purchase</small>
+            </button>
+            <button type=\"button\" class=\"role-btn\" data-role=\"seller\">
+              <span class=\"role-icon\">🏪</span>
+              <strong>Seller</strong>
+              <small>List & sell products</small>
+            </button>
+            <button type=\"button\" class=\"role-btn\" data-role=\"affiliate\">
+              <span class=\"role-icon\">🤝</span>
+              <strong>Affiliate</strong>
+              <small>Earn commissions</small>
+            </button>
+          </div>
+        </div>
+
+        <form id=\"signin-form\" class=\"auth-form\" style=\"display: none;\">
+          <p id=\"role-display\" style=\"color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;\"></p>
+          <input type=\"email\" placeholder=\"Email address\" required />
+          <input type=\"password\" placeholder=\"Password\" required />
+          <div id=\"role-extra\"></div>
+          <button type=\"submit\">Sign in</button>
+          <button type=\"button\" id=\"back-btn\" style=\"background: var(--surface); color: var(--text); border: 1px solid var(--border); margin-top: 0.5rem;\">← Back to roles</button>
+        </form>
+        
+        <p class=\"helper-text\">Don't have an account? <a href=\"#\">Create one now</a></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Agrobaz Market</p>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+      const roleSelector = document.getElementById('role-selector');
+      const signinForm = document.getElementById('signin-form');
+      const roleButtons = document.querySelectorAll('.role-btn');
+      const backBtn = document.getElementById('back-btn');
+      const roleDisplay = document.getElementById('role-display');
+      const roleExtra = document.getElementById('role-extra');
+
+      const roleInfo = {
+        buyer: {
+          display: '👤 Signing in as Buyer',
+          extra: ''
+        },
+        seller: {
+          display: '🏪 Signing in as Seller',
+          extra: '<input type=\"text\" placeholder=\"Business name\" />'
+        },
+        affiliate: {
+          display: '🤝 Signing in as Affiliate',
+          extra: '<input type=\"text\" placeholder=\"Affiliate ID (optional)\" />'
+        }
+      };
+
+      let selectedRole = null;
+
+      roleButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          selectedRole = btn.dataset.role;
+          const info = roleInfo[selectedRole];
+          roleDisplay.textContent = info.display;
+          roleExtra.innerHTML = info.extra;
+          roleSelector.style.display = 'none';
+          signinForm.style.display = 'block';
+        });
+      });
+
+      backBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        roleSelector.style.display = 'block';
+        signinForm.style.display = 'none';
+        selectedRole = null;
+      });
+
+      signinForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert(`Welcome to Agrobaz as a ${selectedRole}!`);
+        // In a real app, this would send data to a backend
+      });
+    </script>

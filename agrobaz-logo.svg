@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="200" height="145">
+  <!-- Gold wheat and globe icon -->
+  <g id="logo-icon">
+    <!-- Globe -->
+    <circle cx="380" cy="180" r="85" fill="none" stroke="#c8a24a" stroke-width="6"/>
+    <path d="M 320 180 Q 380 140 440 180" fill="none" stroke="#c8a24a" stroke-width="5"/>
+    <path d="M 320 180 Q 380 220 440 180" fill="none" stroke="#c8a24a" stroke-width="5"/>
+    
+    <!-- Wheat ear -->
+    <g transform="translate(330, 120)">
+      <line x1="0" y1="0" x2="0" y2="80" stroke="#c8a24a" stroke-width="4"/>
+      <!-- Left grains -->
+      <ellipse cx="-12" cy="20" rx="8" ry="14" fill="#c8a24a"/>
+      <ellipse cx="-18" cy="40" rx="8" ry="14" fill="#c8a24a"/>
+      <ellipse cx="-15" cy="60" rx="8" ry="14" fill="#c8a24a"/>
+      <!-- Right grains -->
+      <ellipse cx="12" cy="20" rx="8" ry="14" fill="#c8a24a"/>
+      <ellipse cx="18" cy="40" rx="8" ry="14" fill="#c8a24a"/>
+      <ellipse cx="15" cy="60" rx="8" ry="14" fill="#c8a24a"/>
+    </g>
+    
+    <!-- Right accent line -->
+    <path d="M 480 180 L 560 180" stroke="#c8a24a" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Text: Agrobaz -->
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="120" font-weight="bold" text-anchor="middle" fill="#c8a24a" letter-spacing="-2">Agrobaz</text>
+  
+  <!-- Text: MARKET -->
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="50" font-weight="600" text-anchor="middle" fill="#c8a24a" letter-spacing="6">MARKET</text>
+  
+  <!-- Decorative lines -->
+  <line x1="150" y1="400" x2="280" y2="400" stroke="#c8a24a" stroke-width="4" stroke-linecap="round"/>
+  <line x1="520" y1="400" x2="650" y2="400" stroke="#c8a24a" stroke-width="4" stroke-linecap="round"/>
+</svg>

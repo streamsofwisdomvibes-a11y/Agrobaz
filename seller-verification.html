@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seller Verification | Agrobaz</title>
+    <meta name="description" content="Review and verify seller applications on Agrobaz." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="subpage-header">
+      <nav class="topbar">
+        <a class="brand" href="../index.html">
+          <img src="../images/agrobaz-logo.svg" alt="Agrobaz Market" class="logo">
+        </a>
+        <div class="nav-links">
+          <a href="seller-verification.html">Verification</a>
+          <a href="seller-dashboard.html">Dashboard</a>
+          <a href="signin.html">Sign in</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-banner">
+        <p class="eyebrow">Seller verification</p>
+        <h1>Review and approve seller applications</h1>
+        <p>Verify business documents, identity, and compliance before granting marketplace access.</p>
+      </section>
+
+      <section class="page-grid">
+        <aside class="sidebar-nav">
+          <ul>
+            <li><a class="active" href="#">Pending reviews</a></li>
+            <li><a href="#">Approved sellers</a></li>
+            <li><a href="#">Rejected sellers</a></li>
+            <li><a href="#">Documents</a></li>
+          </ul>
+        </aside>
+
+        <div class="content-card">
+          <h3>Pending verification requests</h3>
+          <table class="listing-table">
+            <thead>
+              <tr>
+                <th>Seller</th>
+                <th>Business</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Daniel Okafor</td>
+                <td>Green Harvest Ltd.</td>
+                <td>Pending</td>
+                <td><a class="btn btn-secondary" href="#">Review</a></td>
+              </tr>
+              <tr>
+                <td>Grace Mensah</td>
+                <td>FarmTide Supplies</td>
+                <td>Pending</td>
+                <td><a class="btn btn-secondary" href="#">Review</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Agrobaz Market</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
